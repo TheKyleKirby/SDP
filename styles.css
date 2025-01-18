@@ -1,12 +1,4 @@
-:root {
-  --primary-color: #000000; /* Black */
-  --secondary-color: #8b8b8b; /* Red */
-  --accent-color: #ff0000; /* Bright Red-Orange for accents */
-  --text-color: #ffffff; /* White */
-  --bg-color: #f4f4f4; /* Light Gray Background */
-  --font-family: 'Arial, sans-serif';
-}
-
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -14,95 +6,160 @@
 }
 
 body {
-  font-family: var(--font-family);
-  background-color: var(--bg-color);
-  color: var(--primary-color);
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.header {
-  background-color: var(--primary-color);
-  padding: 1rem 0;
-  color: var(--text-color);
+.logo {
+  font-family: 'Yellowtail', cursive;
+  font-size: 3rem;
+  color: #0076b6;
 }
 
-.header .logo {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.nav {
-  text-align: right;
-}
-
-.nav a {
-  color: var(--text-color);
+nav a {
+  color: #ffffff;
   text-decoration: none;
   margin-left: 1.5rem;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
-.hero {
-  text-align: center;
-  padding: 3rem 1rem;
-  background-color: var(--secondary-color);
-  color: var(--text-color);
+nav a:hover {
+  color: #0076b6;
 }
 
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero .btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--accent-color);
-  color: var(--text-color);
-  text-decoration: none;
+/* Contact Us Button */
+.btn-contact {
+  background-color: #0076b6;
+  padding: 0.5rem 1.5rem;
+  color: #ffffff;
+  border-radius: 12px;
   font-weight: bold;
-  border-radius: 5px;
-  margin-top: 1rem;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 1.5rem;
+  transition: background-color 0.3s ease;
 }
 
-.products {
-  padding: 2rem 0;
+.btn-contact i {
+  margin-left: 0.5rem; /* Space between the text and the icon */
+}
+
+.btn-contact:hover {
+  background-color: #005b8a;
+}
+
+/* Footer */
+footer {
   text-align: center;
+  padding: 1.5rem 0;
+  background-color: #afafaf;
+  color: #000000;
+}
+
+/* About Us Section */
+.about {
+  background-color: #f4f4f4;
+  padding: 6rem 0;
+}
+
+.about h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #000000;
+  font-size: 2.5rem;
+}
+
+.about p {
+  text-align: center;
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Products Section */
+.products {
+  background-color: #ffffff;
+  padding: 6rem 0;
 }
 
 .products h2 {
-  margin-bottom: 2rem;
-  color: var(--primary-color);
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.product-card {
-  background-color: var(--text-color);
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  color: var(--primary-color);
-}
-
-.product-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.footer {
-  background-color: var(--primary-color);
-  color: var(--text-color);
   text-align: center;
-  padding: 1rem 0;
+  margin-bottom: 2.5rem;
+  color: #000000;
+  font-size: 2.5rem;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.product-item {
+  text-align: center;
+  max-width: 350px;
+}
+
+.product-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #0076b6;
+}
+
+.product-item p {
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #f4f4f4;
+  padding: 6rem 0;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #000000;
+  font-size: 2.5rem;
+}
+
+.contact p {
+  text-align: center;
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact ul {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+.contact li {
+  font-size: 1.3rem;
+  margin: 1rem 0;
 }
